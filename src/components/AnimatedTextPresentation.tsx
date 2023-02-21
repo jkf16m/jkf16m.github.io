@@ -8,7 +8,8 @@ const Text = styled.p`
     color: #fff;
     margin: 0 auto;
     text-align: center;
-    font-family: "Roboto", sans-serif;
+    // roboto mono font should be used
+    font-family: 'Roboto Mono', monospace;
 `;
 
 /**

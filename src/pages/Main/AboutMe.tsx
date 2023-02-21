@@ -37,7 +37,11 @@ const TextContainer = styled.div`
     filter: brightness(1);
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+    font-size: 2rem;
+    // roboto mono
+    font-family: 'Roboto Mono', monospace;
+`;
 const Description = styled.div`
 `;
 const P = styled.p``;

@@ -17,6 +17,8 @@ const Nav = styled.nav`
     border-bottom: 1px solid #1d1d1d;
     margin: 0 auto;
     align-items: center;
+    // its sticky
+    position: sticky;
 `;
 
 // centered element
