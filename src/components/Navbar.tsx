@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import React from "react";
 
+
+import NavbarLayout, {Logo, Nav as Nav2} from "../layouts/NavbarLayout";
 /**
  * This is a centered navbar component, the elements are centered in the navbar
  * It is dark blue and has a small border at the bottom
@@ -19,6 +21,8 @@ const Nav = styled.nav`
     align-items: center;
     // its sticky
     position: sticky;
+
+    font-size: 0.8em;
 `;
 
 // centered element
@@ -31,7 +35,6 @@ const Element = styled.a`
         // the borders should be round
         border-radius: .5rem;
         // the padding should be 1rem
-        padding: 1rem;
         
         // transition the background color and the padding
         transition: background-color .5s, padding .5s ease-in-out;
@@ -47,11 +50,14 @@ const Element = styled.a`
 
 const Navbar = ()=>{
     return (
-        <Nav>
-            <Element href="#about-me">About me</Element>
-            <Element href="#projects">Projects I made</Element>
-            <Element href="#contact-me">Contact me</Element>
-        </Nav>
+        <NavbarLayout>
+            <Logo></Logo>
+            <Nav2>
+                <Element href="#about-me">About me</Element>
+                <Element href="#projects">Projects I made</Element>
+                <Element href="#contact-me">Contact me</Element>
+            </Nav2>
+        </NavbarLayout>
     );
 }
 

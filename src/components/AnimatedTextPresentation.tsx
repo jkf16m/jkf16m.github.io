@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 
 const Text = styled.p`
-    font-size: 1.5rem;
+    font-size: 1em;
     color: #fff;
     margin: 0 auto;
     text-align: center;

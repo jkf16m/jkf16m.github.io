@@ -34,10 +34,6 @@ const ProjectCard = styled.div`
 
     // when its a big screen, the project should have a width of 45%
     // and centered
-    @media (min-width: 768px) {
-        width: 45%;
-        margin: 1rem auto;
-    }
 
 `;
 
@@ -59,8 +55,8 @@ const ProjectsContainer = styled.div`
     // center the projects
     width: 90% auto;
     height: 100%;
-    padding: 1rem;
     background-color: black;
+    margin: 0;
 
     // when the screen is big, the projects should be displayed in a column but intercalated from left to right
     @media (min-width: 768px) {
@@ -106,9 +102,6 @@ export const Project = ({title, description, image, githubLink, usedTechnologies
                 // This should have a darker background, that covers the whole title
                 {
                     // darker blue
-                    padding: "0.5rem",
-                    marginTop: "0",
-                    marginBottom: "0",
                     borderRadius: "0.5rem",
                     width: "100%",
                     textAlign: "center",

@@ -26,9 +26,13 @@ const Container = styled.div`
 
     // paddings to have the text content
     // in the center of the screen
-    padding: 4rem;
-    padding-top: 1rem !important;
+    padding: 4em;
+    padding-top: 1em !important;
 
+    // if it reaches the size of a table screen, the padding should be 1em
+    @media (min-width: 768px) {
+        padding: 1em;
+    }
 
 `;
 
@@ -38,7 +42,7 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 2rem;
+    font-size: 1.5em;
     // roboto mono
     font-family: 'Roboto Mono', monospace;
 `;

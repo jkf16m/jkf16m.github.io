@@ -8,12 +8,6 @@ const Layout = styled.div`
     grid-template: "nav nav nav" 1fr
                     "main main main" 5fr
                     "footer footer footer" 1fr / 1fr 1fr 1fr;
-    // grid-template for mobile
-    @media (max-width: 768px){
-        grid-template: "nav" 1fr
-                        "main" 5fr
-                        "footer" 1fr / 1fr;
-    }
 
     // grid-template for tablet
     @media (max-width: 1024px){
@@ -21,16 +15,24 @@ const Layout = styled.div`
                         "main" 5fr
                         "footer" 1fr / 1fr;
     }
+
+
 `;
 
 const Nav = styled.div`
     grid-area: nav;
+    width: 100%;
+    height: 100%;
 `;
 const Main = styled.div`
     grid-area: main;
+    width: 100%;
+    height: 100%;
 `;
 const Footer = styled.div`
     grid-area: footer;
+    width: 100%;
+    height: 100%;
 `;
 
 interface MainLayoutProps{

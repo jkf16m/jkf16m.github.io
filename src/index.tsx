@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import AppRoot from './pages/Root';
 import reportWebVitals from './reportWebVitals';
 import "./assets/RetroGaming.ttf";
 
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AppRoot />
   </React.StrictMode>
 );
 
