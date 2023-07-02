@@ -1,10 +1,12 @@
 import React from 'react';
+import theme from '../theme';
 import styled from '@emotion/styled';
 import MainLayout from '../layouts/MainLayout';
 import Navbar from '../components/Navbar';
 
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
+import PresentationLayout from '../layouts/PresentationLayout';
 
 
 // background color should be dark blue
@@ -16,6 +18,7 @@ const Background = styled.div`
 
     justify-content: space-between;
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100vw;
 
     text-align: center;
@@ -45,13 +48,37 @@ const Background = styled.div`
     }
 `;
 
+
+// PRESENTATION COMPONENTS
+/** 
+    - the presentation should be a background image
+    - the background image should be darkened
+    - the background image should be centered
+    - there is a ribbon with the contact information (icons).
+    - the ribbon should be in the middle of the screen, between the image and the limit of the
+        presentation
+    - the ribbon should be a little transparent.
+    - there is various geometrical figures in the background, SVGs
+    - There is a navbar in the top of the screen
+*/
+
 const BuiltProjects = () => {
     return (
         <Background>
             <MainLayout
-                Nav={<Navbar />}
-                Main={<Main />}
-                Footer={<Footer />}
+                Presentation={
+                    <PresentationLayout 
+                        Main={
+                        <div>
+                        <Navbar/>
+                        </div>}
+                        Secondary={<></>}
+                    />
+                }
+                Nav={<></>}
+                Main={<Main 
+                    Footer={<Footer/>}
+                    />}
             />
         </Background>
     );

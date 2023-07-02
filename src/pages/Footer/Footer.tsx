@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 const FooterStyle = styled.footer`
     display: flex;
     justify-content: space-between;
-    height: 10vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: #090916;
     border-top: 1px solid #1d1d1d;
     margin: 0 auto;
@@ -23,7 +23,16 @@ const ContactMeLink = styled.a`
 `;
 
 const ContactMe = ({ href, target, email, whatsapp }: { href: string, target: string, email: string, whatsapp: string }) =>
-    <ContactMeLink href = {href} target = {target} />
+    <div>
+        <h3>Contact me</h3>
+        <ul>
+            <li>
+                <ContactMeLink href={href} target={target}>
+                    Linkedin
+                </ContactMeLink>
+            </li>
+        </ul>
+    </div>
 
 
 const Footer = () => {
@@ -31,7 +40,7 @@ const Footer = () => {
         <div>
             <FooterStyle>
                 <ContactMe
-                    href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-5b1b3b1b3/"
+                    href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/"
                     target="_blank"
                     email="jkf16m@gmail.com"
                     whatsapp="https://wa.me/+528131078196"
