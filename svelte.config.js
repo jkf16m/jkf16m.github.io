@@ -15,7 +15,10 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 			strict: true
-		})
+		}),
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
 	}
 };
 
