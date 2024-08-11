@@ -1,0 +1,1 @@
+import{r as s,e as a}from"./equality.oiFhdgmf.js";import{e as c,f,h as i,u,g as l,i as _}from"./runtime.C6KgFPKo.js";function g(){const t=i,n=t.l.u;n&&(n.b.length&&c(()=>{r(t),s(n.b)}),f(()=>{const o=u(()=>n.m.map(a));return()=>{for(const e of o)typeof e=="function"&&e()}}),n.a.length&&f(()=>{r(t),s(n.a)}))}function r(t){if(t.l.s)for(const n of t.l.s)l(n);_(t.s)}export{g as i};
