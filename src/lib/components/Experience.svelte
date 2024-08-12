@@ -3,7 +3,7 @@
     export type Props = {
         translationKey: string;
         role: string;
-        mainTechnology: string;
+        mainTechnology: AvailableIcons;
         usedTechnologies: AvailableIcons[];
         secondaryRole: string;
         remarksCount: number;
@@ -33,12 +33,17 @@
     const capitalize = (str: string)=>str.charAt(0).toUpperCase() + str.slice(1);
     
 </script>
+
+
+<hr/>
 <article>
     <header>
-        <h3>{capitalize(t(`roles.${secondaryRole}`))} {$i18n.t('words.in')} {experience_t('name')}, {t(`roles.${role}`)} {t(`technologies.${mainTechnology}`)}</h3>
+        <h3>
+            {capitalize(t(`roles.${role}`))} {$i18n.t('words.in')} {experience_t('name')}, {t(`roles.${secondaryRole}`)} <RegisteredIcon name={mainTechnology} size={"medium"} inline={true}/>
+        </h3>
         <h4>{experience_t('duration')}</h4>
     </header>
-    <details>
+    <details open>
         <summary>{t('remarks')}</summary>
         <p>{experience_t('description')}</p>
         <ul>
@@ -49,6 +54,9 @@
     </details>
     <footer>
         <div class="grid">
+            <div>
+                <RegisteredIcon name={mainTechnology} size={'medium'}/>
+            </div>
             {#each usedTechnologies as usedTechnology}
                 <div>
                     <RegisteredIcon name={usedTechnology} size={"medium"}/>
@@ -57,3 +65,4 @@
         </div>
     </footer>
 </article>
+<hr/>

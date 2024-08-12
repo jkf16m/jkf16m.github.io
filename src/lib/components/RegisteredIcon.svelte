@@ -2,6 +2,7 @@
     export type Props = {
         name: AvailableIcons;
         size: Size;
+		inline?: boolean;
     };
     export type IconObject = {
         icon?: string;
@@ -27,6 +28,9 @@
     |"java"
     |"mssql"
     |"mysql"
+    |"excel"
+    |"visualbasic"
+    |"oracleScm"
 
 </script>
 <script lang="ts">
@@ -119,6 +123,18 @@
             label: 'MySql',
             icon: 'icon-mysql',
             link: "https://www.mysql.com/",
+        },
+        excel:{
+            label: 'Excel',
+            icon: 'fas fa-file-excel',
+            link: 'https://www.microsoft.com/en-us/microsoft-365/excel',
+        },
+        visualbasic:{
+            label: 'Visual Basic 6',
+        },
+        oracleScm: {
+            label: 'Oracle SCM',
+            link: 'https://www.oracle.com/mx/scm/',
         }
     }
 
@@ -131,4 +147,5 @@ iconClasses={selected.icon}
 label={selected.label}
 size={p.size}
 link={selected.link}
+inline={p.inline ?? false}
 />

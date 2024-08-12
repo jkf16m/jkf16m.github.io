@@ -1,6 +1,9 @@
 import type { Locale } from "./type";
 
 export default {
+    words:{
+        in: 'in',
+    },
     page: {
         title: "Portfolio",
         home: {   

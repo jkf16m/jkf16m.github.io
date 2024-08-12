@@ -17,11 +17,7 @@
 
 <article>
     <header><h2 id="experience">{$i18n.t('page.experience.nav')}</h2></header>
-    <ul>
-        <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
-        <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>
-    </ul>
+
     <Experience 
         remarksCount={4}
         translationKey={'pictale'}
@@ -31,7 +27,6 @@
         usedTechnologies={[
             'javascript',
             'csharp',
-            'reactNative',
             'nodejs',
         ]}
     />
@@ -55,7 +50,37 @@
         role='maintainer'
         mainTechnology='csharp'
         usedTechnologies={[
+            'azure',
+            'mssql',
+            'javascript',
+            'nodejs',
+        ]}
+    />
+    <Experience
+        remarksCount={4}
+        translationKey='ravisa'
+        secondaryRole='developer'
+        role='technicalSupport'
+        mainTechnology='aspnet'
+        usedTechnologies={[
             'csharp',
+            'mssql',
+            'react',
+            'javascript',
+            'python',
+        ]}
+    />
+    <Experience
+        remarksCount={3}
+        translationKey='haloCreativeAndDesign'
+        secondaryRole='helper'
+        role='engineer'
+        mainTechnology='oracleScm'
+        usedTechnologies={[
+            'mssql',
+            'python',
+            'excel',
+            'visualbasic',
         ]}
     />
 </article>

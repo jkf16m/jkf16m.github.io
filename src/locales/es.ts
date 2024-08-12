@@ -46,7 +46,7 @@ export default {
 			},
 			ingeniosys:{
 				name: 'Ingeniosys',
-				duration: "Marzo 2024 - Enero 2024",
+				duration: "Marzo 2023 - Enero 2024",
 				description: `
 					Trabaje aquí por varios meses, antes de empezar en Be-it
 				`,
@@ -54,6 +54,58 @@ export default {
 					1: 'Multiple projects with ASP.NET, jQuery and MVC.',
 					2: 'Full-stack development, ASP.NET and MVC.',
 					3: 'Much more experience in UX/UI.',
+				}
+			},
+			simpatTech:{
+				name: 'SimpatTech',
+				duration: "Mayo 2022 - Enero 2023",
+				description: `
+					Trabaje haciendo asignaciones para la empresa
+				`,
+				remark:{
+					1: 'Developing and helping making ASP.NET Razor pages websites.',
+					2: 'Solving issues related to bugs.',
+					3: 'Making InHouse projects.',
+				}
+			},
+			ravisa:{
+				name: 'Ravisa',
+				duration: 'Mayo 2021 - Mayo 2022',
+				description: `
+					Una empresa de logística aduanera, estuve ayudando en la lógica de pedimentos,
+					y en mantener un sistema en estado productivo.
+					También en el desarrollo del proyecto del desarrollo de CartaPorte.
+				`,
+				remark: {
+					1: 'Developing a web services with ASP.NET CORE and Entity framework CORE, trying to follow a micro-service architecture and improve maintainability.',
+					2: 'Offering customer service to our clients and users via outlook.',
+					3: 'Creating power automate flows to send information to our clients and simple automation tasks.',
+					4: 'Designing web applications and developing them with ReactJS.',
+				},
+			},
+			haloCreativeAndDesign:{
+				name: 'Halo Creative and Design',
+				duration: 'Enero 2020 - Agosto 2020',
+				description: `
+					En una fábrica de muebles, trabaje en el área de ingenieria y logística.
+				`,
+				remark:{
+					1: 'Helping in the optimization and implementation of the new informational system Oracle SCM (Supply Chain Management).',
+					2: 'A helper for an industrial engineer, recording times of the production chain and giving new ideas about how to cut times.',
+					3: 'Multiple projects, including one important project that was about changing more than 14,000 records in a SQL Database. (It was a long hard working project due to the limited permissions given by Oracle SCM as an application), still done.',
+				},
+			},
+			virtualium: {
+				name: 'Virtualium Team',
+				duration: 'Julio 2020 - Septiembre 2020',
+				description: `
+					De mis primeras experiencias profesionales en la industria de software.
+				`,
+				remark:{
+					1: 'Programming using ReactJS framework.',
+					2: 'Participating and giving ideas of the current project status.',
+					3: 'Consuming API REST, and giving specifications about how the API REST entry points should work, working together finding the best approach for the solution (both me and my coworker, between frontEnd and backEnd developers).',
+					4: 'Nice understading between coworkers and me, using english as our main communication language.',
 				}
 			}
 		},
@@ -75,15 +127,20 @@ export default {
 				typescript: 'Typescript',
 				nodejs: 'NodeJS',
 				jquery: 'JQuery',
-				aspnet: 'ASP.NET'
+				aspnet: 'ASP.NET',
+				oracleScm: 'Oracle SCM',
 			},
 			roles:{
 				architect: 'arquitecto',
 				developer: 'desarrollador',
 				leadDeveloper: 'desarrollador principal',
 				fullstack: 'full-stack',
+				technicalSupport: 'soporte técnico',
+				maintainer: 'mantenimiento',
+				engineer: 'ingeniero',
+				helper: 'ayudante',
 			},
-			remarks: 'Abrir detalles'
+			remarks: 'Detalles'
 		},
 	},
 } as Locale;
