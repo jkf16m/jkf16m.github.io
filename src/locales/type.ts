@@ -7,8 +7,6 @@ export type Locale = {
         title: string;
         home: Page & {
             greetings: string;
-            introduction: string;
-            whoAmI: string;
             welcome: string;
         },
         about: Page & {

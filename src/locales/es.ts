@@ -5,24 +5,40 @@ export default {
 		title: 'Portafolio',
 		home: {
 			nav: 'Inicio',
-			greetings: '¡¡Bienvenido a mi portafolio!!',
-			whoAmI: '¿Quién soy?',
-			introduction:
-				'Mi nombre es José Daniel Flores Morales, soy un desarrollador de software, actualmente tengo 3 años de experiencia en la industria',
-			welcome: `En esta página web, encontrarás mi experiencia en la industria, proyectos que he desarrollado y
-            proyectos que tengo planeado.
+			greetings: 'José Daniel Flores Morales',
+			welcome: `
+				Desarrollador con más de 3 años de experiencia. Enfocado en frontend, aspirando
+				a la arquitectura de software.
             `,
 			portfolioSourceCode: `Puedes encontrar el código fuente de este portafolio`,
 			here: 'aquí'
 		},
 		about: {
-			nav: 'Acerca de'
+			whoAmI: '¿Quién soy?',
+			nav: 'Acerca de',
+			introduction:
+				`Mi nombre es José Daniel Flores Morales, soy un desarrollador de software, actualmente tengo 3 años de experiencia en la industria`,
 		},
 		contact: {
 			nav: 'Contáctame'
 		},
 		projects: {
-			nav: 'Proyectos'
+			nav: 'Proyectos',
+			pictale:{
+				description: `
+				Proyecto de pictale
+				`
+			}
+		},
+	},
+	components:{
+		project:{
+			date: 'Fecha',
+			role: 'Rol',
+			usedTechnologies: 'Tecnologías usadas',
+			roles:{
+				architect: 'Arquitecto'
+			}
 		}
 	}
 } as Locale;
