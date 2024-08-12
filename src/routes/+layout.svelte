@@ -1,8 +1,9 @@
 <script lang="ts"> 
     import "@picocss/pico/css/pico.jade.min.css";
-    import { i18n, language } from "$lib/localization";
+    import { i18n, language } from "$lib/localization.svelte";
 
-    let languageBinding = $state("es");
+    let languageBinding = $state($language);
+    let { children } = $props();
     $effect(()=>{
         $language = languageBinding;
     })
@@ -26,6 +27,6 @@
         </ul>
     </nav>
     <article>
-        <slot></slot>
+        {@render children()}
     </article>
 </main>
