@@ -35,24 +35,24 @@
 </script>
 
 
-<hr/>
-<article>
+<article class="t-grid t-grid-flow-row">
     <header>
-        <h3>
+        <h3 class="t-text-wrap">
             {capitalize(t(`roles.${role}`))} {$i18n.t('words.in')} {experience_t('name')}, {t(`roles.${secondaryRole}`)} <RegisteredIcon name={mainTechnology} size={"medium"} inline={true}/>
         </h3>
         <h4>{experience_t('duration')}</h4>
     </header>
-    <details open>
-        <summary>{t('remarks')}</summary>
-        <p>{experience_t('description')}</p>
-        <ul>
-            {#each remarks as remark}
-            <li>{$i18n.t(`page.experience.${translationKey}.remark.${remark}`)}</li>
-            {/each}
-        </ul>
-    </details>
-    <footer>
+    
+    <p>
+        {experience_t('description')}
+    </p>
+    <ul>
+        {#each remarks as remark}
+        <li>{$i18n.t(`page.experience.${translationKey}.remark.${remark}`)}</li>
+        {/each}
+    </ul>
+
+    <footer class="t-flex t-flex-col t-justify-end">
         <div class="grid">
             <div>
                 <RegisteredIcon name={mainTechnology} size={'medium'}/>
@@ -65,4 +65,3 @@
         </div>
     </footer>
 </article>
-<hr/>
