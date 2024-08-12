@@ -35,9 +35,24 @@
             {/each}
         </ul>
     </details>
-    <div class="grid">
-        {#each usedTechnologies as usedTechnology}
-            <div>{t(`technologies.${usedTechnology}`)}</div>
-        {/each}
-    </div>
+    <footer>
+        <div class="grid">
+            {#each usedTechnologies as usedTechnology}
+                <div>
+                    {#if usedTechnology[1]}
+                        <i class={`icon-size ${usedTechnology[1]}`}></i>
+                    {/if}
+                    {#if usedTechnology[0]}
+                        <div>{t(`technologies.${usedTechnology[0]}`)}</div>
+                    {/if}
+                </div>
+            {/each}
+        </div>
+    </footer>
 </article>
+
+<style>
+    .icon-size{
+        font-size: 2rem;
+    }
+</style>

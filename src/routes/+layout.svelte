@@ -1,5 +1,7 @@
 <script lang="ts"> 
-    import "@picocss/pico/css/pico.jade.min.css";
+    import "@picocss/pico/css/pico.jade.min.css"
+    import "@fortawesome/fontawesome-free/css/all.min.css";
+    import "font-mfizz/dist/font-mfizz.css";
     import { i18n, language } from "$lib/localization.svelte";
 
     let languageBinding = $state($language);

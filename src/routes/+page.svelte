@@ -1,16 +1,6 @@
 <script lang='ts'>
     import Experience from "$lib/components/Experience.svelte";
     import { i18n } from "$lib/localization.svelte";
-
-    const projectTranslationsFallback = (project: string)=>(str: string)=>{
-        return $i18n.t(`page.projects.${project}.${str}`, {
-            defaults: [{message: str}]
-        })
-    };
-
-    const pt = (label: string)=>{
-        return $i18n.t(`page.components.project.${label}`);
-    }
 </script>
 
 <header>
@@ -32,7 +22,10 @@
         secondaryRole={"developer"}
         mainTechnology={'reactNative'}
         usedTechnologies={[
-            'javascript', 'nodejs', 'csharp'
+            ['javascript', "icon-javascript-alt"],
+            [undefined, 'icon-csharp'],
+            ['reactNative', 'icon-reactjs'],
+            ['nodejs', 'icon-nodejs'],
         ]}
     />
     <Experience
@@ -42,7 +35,20 @@
         role="fullstack"
         mainTechnology="dotnet"
         usedTechnologies={[
-            "javascript", "csharp", "aspnet", "jquery"
+            ['javascript', "icon-javascript-alt"],
+            [undefined, 'icon-csharp'],
+            ["aspnet", undefined],
+            ['jquery', "icon-jquery"]
+        ]}
+    />
+    <Experience
+        remarksCount={3}
+        translationKey='simpatTech'
+        secondaryRole='developer'
+        role='maintainer'
+        mainTechnology='csharp'
+        usedTechnologies={[
+            [undefined, 'icon-csharp'],
         ]}
     />
 </article>
