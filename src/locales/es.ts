@@ -57,6 +57,9 @@ export default {
 				}
 			}
 		},
+		footer: {
+			madeWith: "Aplicación hecha con svelte"
+		}
 	},
 	components:{
 		project:{
@@ -81,6 +84,6 @@ export default {
 				fullstack: 'full-stack',
 			},
 			remarks: 'Abrir detalles'
-		}
-	}
+		},
+	},
 } as Locale;

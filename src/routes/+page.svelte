@@ -1,6 +1,8 @@
 <script lang='ts'>
     import Experience from "$lib/components/Experience.svelte";
     import { i18n } from "$lib/localization.svelte";
+
+    import { version } from '$app/environment';
 </script>
 
 <header>
@@ -59,15 +61,25 @@
 </article>
 
 <!--contact me-->
-<footer id="contact-me">
+<footer id="contact-me" class="t-flex t-flex-col t-content-center">
     <h4>{$i18n.t('page.contact.nav')}</h4>
-    <ul class="t-list-none">
+    <ul class="t-inline">
         <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
         <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
         <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>
     </ul>
-    <small>
-        {$i18n.t('page.home.portfolioSourceCode')}
-        <a href='https://github.com/jkf16m/jkf16m.github.io'>{$i18n.t('page.home.here')}</a>
-    </small>
+    <p class="t-text-center">
+        <small>
+            {$i18n.t('page.home.portfolioSourceCode')}
+            <a href='https://github.com/jkf16m/jkf16m.github.io'>{$i18n.t('page.home.here')}</a>
+        </small>
+        <br/>
+        <small>
+            {$i18n.t('page.footer.madeWith')}
+        </small>
+        <br/>
+        <small>
+            v{version}
+        </small>
+    </p>
 </footer>

@@ -18,7 +18,10 @@ const config = {
 		}),
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
-		}
+		},
+		version:{
+			name: process.env.npm_package_version
+		},
 	}
 };
 
