@@ -24,7 +24,7 @@
 
 
 <article>
-    <header><h2 id="experiences">{$i18n.t('page.experience.nav')}</h2></header>
+    <header><h2 id="experience">{$i18n.t('page.experience.nav')}</h2></header>
     <Experience
         remarksCount={4}
         translationKey={'pictale'}
