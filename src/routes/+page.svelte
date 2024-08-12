@@ -15,17 +15,22 @@
 
 <article>
     <header><h2 id="experience">{$i18n.t('page.experience.nav')}</h2></header>
-    <Experience
+    <ul>
+        <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
+        <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>
+    </ul>
+    <Experience 
         remarksCount={4}
         translationKey={'pictale'}
         role={'leadDeveloper'}
         secondaryRole={"developer"}
         mainTechnology={'reactNative'}
         usedTechnologies={[
-            ['javascript', "icon-javascript-alt"],
-            [undefined, 'icon-csharp'],
-            ['reactNative', 'icon-reactjs'],
-            ['nodejs', 'icon-nodejs'],
+            'javascript',
+            'csharp',
+            'reactNative',
+            'nodejs',
         ]}
     />
     <Experience
@@ -35,10 +40,10 @@
         role="fullstack"
         mainTechnology="dotnet"
         usedTechnologies={[
-            ['javascript', "icon-javascript-alt"],
-            [undefined, 'icon-csharp'],
-            ["aspnet", undefined],
-            ['jquery', "icon-jquery"]
+            'javascript',
+            'csharp',
+            "aspnet",
+            'jquery',
         ]}
     />
     <Experience
@@ -48,7 +53,7 @@
         role='maintainer'
         mainTechnology='csharp'
         usedTechnologies={[
-            [undefined, 'icon-csharp'],
+            'csharp',
         ]}
     />
 </article>
@@ -56,7 +61,7 @@
 <!--contact me-->
 <footer id="contact-me">
     <h4>{$i18n.t('page.contact.nav')}</h4>
-    <ul>
+    <ul class="t-list-none">
         <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
         <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
         <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>

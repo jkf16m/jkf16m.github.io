@@ -1,8 +1,11 @@
 <script lang="ts"> 
-    import "@picocss/pico/css/pico.jade.min.css"
     import "@fortawesome/fontawesome-free/css/all.min.css";
     import "font-mfizz/dist/font-mfizz.css";
+    import "../app.css";
     import { i18n, language } from "$lib/localization.svelte";
+	import NavButtons from "$lib/components/NavButtons.svelte";
+    import LanguageSelect from '$lib/components/LanguageSelect.svelte';
+	import GoToTop from "$lib/components/GoToTop.svelte";
 
     let languageBinding = $state($language);
     let { children } = $props();
@@ -15,21 +18,26 @@
         <ul>
             <li><strong>{$i18n.t('page.title')}</strong></li>
         </ul>
-        <ul>
-            <li><a href="/">{$i18n.t('page.home.nav')}</a></li>
-            <li><a href="#about">{$i18n.t('page.about.nav')}</a></li>
-            <li><a href="#experience">{$i18n.t('page.experience.nav')}</a></li>
-            <li><a href="#projects">{$i18n.t('page.projects.nav')}</a></li>
-            <li><a href="#contact-me">{$i18n.t('page.contact.nav')}</a></li>
+        <ul class="t-hidden xl:t-block">
+            <NavButtons/>
             <li>
-                <select bind:value={languageBinding}>
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                </select>
+                <LanguageSelect bind:value={languageBinding}/>
             </li>
         </ul>
     </nav>
+    <aside class="t-block xl:t-hidden">
+        <nav>
+            <li>
+                <LanguageSelect bind:value={languageBinding}/>
+            </li>
+            <ul>
+                <NavButtons/>
+            </ul>
+        </nav>
+    </aside>
+
     <article>
         {@render children()}
     </article>
+    <GoToTop/>
 </main>

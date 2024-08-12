@@ -1,7 +1,19 @@
 
+<script lang="ts" context="module">
+    export type Props = {
+        translationKey: string;
+        role: string;
+        mainTechnology: string;
+        usedTechnologies: AvailableIcons[];
+        secondaryRole: string;
+        remarksCount: number;
+    };
+</script>
+
 <script lang='ts'>
-	import type { Props } from "./Experience.types";
-    import { i18n } from "$lib/localization.svelte";
+	import { i18n } from "$lib/localization.svelte";
+	import RegisteredIcon from "./RegisteredIcon.svelte";
+	import type { AvailableIcons } from "./RegisteredIcon.svelte";
 
     let {
         role,
@@ -39,20 +51,9 @@
         <div class="grid">
             {#each usedTechnologies as usedTechnology}
                 <div>
-                    {#if usedTechnology[1]}
-                        <i class={`icon-size ${usedTechnology[1]}`}></i>
-                    {/if}
-                    {#if usedTechnology[0]}
-                        <div>{t(`technologies.${usedTechnology[0]}`)}</div>
-                    {/if}
+                    <RegisteredIcon name={usedTechnology} size={"medium"}/>
                 </div>
             {/each}
         </div>
     </footer>
 </article>
-
-<style>
-    .icon-size{
-        font-size: 2rem;
-    }
-</style>
