@@ -1,5 +1,5 @@
 <script lang='ts'>
-    import Project from "$lib/components/Project.svelte";
+    import Experience from "$lib/components/Experience.svelte";
     import { i18n } from "$lib/localization.svelte";
 
     const projectTranslationsFallback = (project: string)=>(str: string)=>{
@@ -24,19 +24,25 @@
 
 
 <article>
-    <header><h2 id="projects">{$i18n.t('page.projects.nav')}</h2></header>
-    <Project
-        projectDetailsLabel={$i18n.t('components.project.details')}
-        duration={$i18n.t('page.projects.pictale.duration')}
-        dateLabel={$i18n.t('components.project.date')}
-        date={'2023-07 2024-10'}
-        name='Pictale'
-        description={$i18n.t('page.projects.pictale.description')}
-        roleLabel={$i18n.t('components.project.role')}
-        role={$i18n.t('components.project.roles.architect')}
-        usedTechnologiesLabel={$i18n.t('components.project.usedTechnologies')}
+    <header><h2 id="experiences">{$i18n.t('page.experience.nav')}</h2></header>
+    <Experience
+        remarksCount={4}
+        translationKey={'pictale'}
+        role={'leadDeveloper'}
+        secondaryRole={"developer"}
+        mainTechnology={'reactNative'}
         usedTechnologies={[
-            'javascript', 'nodejs', 'csharp', 'react-native'
+            'javascript', 'nodejs', 'csharp'
+        ]}
+    />
+    <Experience
+        remarksCount={3}
+        translationKey='ingeniosys'
+        secondaryRole="developer"
+        role="fullstack"
+        mainTechnology="dotnet"
+        usedTechnologies={[
+            "javascript", "csharp", "aspnet", "jquery"
         ]}
     />
 </article>

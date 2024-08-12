@@ -19,7 +19,15 @@ export default {
             nav: "Contact Me"
         },
         projects: {
-            nav: "Projects"
+            nav: "Projects",
+            pictale: {
+                remarks:{
+                    1: `Used react native and ABP framework to develop both front-end and backend of the application.`,
+                    2: `Matching the design choices in react-native, using the simplest approaches.`,
+                    3: `Preferred tools like: Zustand and expo go.`,
+                    4: `Building, publishing and reviewing the app and every single requirement from app store and google play.`
+                },
+            },
         }
     }
 } as Locale;
