@@ -1,8 +1,9 @@
 <script lang='ts'>
-    import Experience from "$lib/components/Experience.svelte";
+    import Experience from "./sections/Experience.svelte";
     import { i18n } from "$lib/localization.svelte";
 
     import { version } from '$app/environment';
+	import Footer from "./sections/Footer/Footer.svelte";
 </script>
 
 <header>
@@ -15,101 +16,7 @@
 <p>{$i18n.t('page.about.introduction')}</p>
 
 
-<article>
-    <header><h2 id="experience">{$i18n.t('page.experience.nav')}</h2></header>
-
-    
-    <div class="grid">
-        <Experience
-            remarksCount={4}
-            translationKey={'pictale'}
-            role={'leadDeveloper'}
-            secondaryRole={"developer"}
-            mainTechnology={'reactNative'}
-            usedTechnologies={[
-                'javascript',
-                'csharp',
-                'nodejs',
-            ]}
-        />
-        <Experience
-            remarksCount={3}
-            translationKey='ingeniosys'
-            secondaryRole="developer"
-            role="fullstack"
-            mainTechnology="dotnet"
-            usedTechnologies={[
-                'javascript',
-                'csharp',
-                "aspnet",
-                'jquery',
-            ]}
-        />
-    </div>
-    <div class="grid">
-        <Experience
-            remarksCount={3}
-            translationKey='simpatTech'
-            secondaryRole='developer'
-            role='maintainer'
-            mainTechnology='csharp'
-            usedTechnologies={[
-                'azure',
-                'mssql',
-                'javascript',
-                'nodejs',
-            ]}
-        />
-        <Experience
-            remarksCount={4}
-            translationKey='ravisa'
-            secondaryRole='developer'
-            role='technicalSupport'
-            mainTechnology='aspnet'
-            usedTechnologies={[
-                'csharp',
-                'mssql',
-                'react',
-                'javascript',
-                'python',
-            ]}
-        />
-    </div>
-    <Experience
-        remarksCount={3}
-        translationKey='haloCreativeAndDesign'
-        secondaryRole='helper'
-        role='engineer'
-        mainTechnology='oracleScm'
-        usedTechnologies={[
-            'mssql',
-            'python',
-            'excel',
-            'visualbasic',
-        ]}
-    />
-</article>
+<Experience/>
 
 <!--contact me-->
-<footer id="contact-me" class="t-flex t-flex-col t-content-center">
-    <h4>{$i18n.t('page.contact.nav')}</h4>
-    <ul class="t-inline">
-        <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
-        <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>
-    </ul>
-    <p class="t-text-center">
-        <small>
-            {$i18n.t('page.home.portfolioSourceCode')}
-            <a href='https://github.com/jkf16m/jkf16m.github.io'>{$i18n.t('page.home.here')}</a>
-        </small>
-        <br/>
-        <small>
-            {$i18n.t('page.footer.madeWith')}
-        </small>
-        <br/>
-        <small>
-            v{version}
-        </small>
-    </p>
-</footer>
+<Footer/>

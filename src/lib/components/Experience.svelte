@@ -14,6 +14,7 @@
 	import { i18n } from "$lib/localization.svelte";
 	import RegisteredIcon from "./RegisteredIcon.svelte";
 	import type { AvailableIcons } from "./RegisteredIcon.svelte";
+	import RegisteredIcons from "./RegisteredIcons.svelte";
 
     let {
         role,
@@ -54,14 +55,13 @@
 
     <footer class="t-flex t-flex-col t-justify-end">
         <div class="grid">
-            <div>
-                <RegisteredIcon name={mainTechnology} size={'medium'}/>
-            </div>
-            {#each usedTechnologies as usedTechnology}
-                <div>
-                    <RegisteredIcon name={usedTechnology} size={"medium"}/>
-                </div>
-            {/each}
+            <RegisteredIcon
+                name={mainTechnology}
+                size={'medium'}/>
+            <RegisteredIcons
+                names={usedTechnologies}
+                size={"medium"}
+            />
         </div>
     </footer>
 </article>

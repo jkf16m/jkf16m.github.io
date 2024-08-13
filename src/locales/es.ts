@@ -38,79 +38,89 @@ export default {
 				Proyecto de pictale
 				`,
 				remark: {
-					1: 'Used react native and ABP framework to develop both front-end and backend of the application.',
-					2: 'Matching the design choices in react-native, using the simplest approaches.',
-					3: 'Preferred tools like: Zustand and expo go.',
-					4: 'Building, publishing and reviewing the app and every single requirement from app store and google play.',
+					1: 'Utilicé React Native y el marco ABP para desarrollar tanto el front-end como el back-end de la aplicación.',
+					2: 'Adaptación de las decisiones de diseño en react-native, utilizando los enfoques más simples.',
+					3: 'Herramientas preferidas: Zustand y expo go.',
+					4: 'Construcción, publicación y revisión de la aplicación y todos los requisitos de la App Store y Google Play.',
 				}
 			},
 			ingeniosys:{
 				name: 'Ingeniosys',
 				duration: "Marzo 2023 - Enero 2024",
 				description: `
-					Trabaje aquí por varios meses, antes de empezar en Be-it
+					Trabajé aquí por varios meses, antes de empezar en Be-it
 				`,
 				remark:{
-					1: 'Multiple projects with ASP.NET, jQuery and MVC.',
-					2: 'Full-stack development, ASP.NET and MVC.',
-					3: 'Much more experience in UX/UI.',
+					1: 'Varios proyectos con ASP.NET, jQuery y MVC.',
+					2: 'Desarrollo full-stack, ASP.NET y MVC.',
+					3: 'Mayor experiencia en UX/UI.',
 				}
 			},
 			simpatTech:{
 				name: 'SimpatTech',
 				duration: "Mayo 2022 - Enero 2023",
 				description: `
-					Trabaje haciendo asignaciones para la empresa
+					Trabajé realizando asignaciones para la empresa
 				`,
 				remark:{
-					1: 'Developing and helping making ASP.NET Razor pages websites.',
-					2: 'Solving issues related to bugs.',
-					3: 'Making InHouse projects.',
+					1: 'Desarrollo y asistencia en la creación de sitios web con ASP.NET Razor Pages.',
+					2: 'Resolución de problemas relacionados con errores.',
+					3: 'Desarrollo de proyectos internos.',
 				}
 			},
 			ravisa:{
 				name: 'Ravisa',
 				duration: 'Mayo 2021 - Mayo 2022',
 				description: `
-					Una empresa de logística aduanera, estuve ayudando en la lógica de pedimentos,
-					y en mantener un sistema en estado productivo.
-					También en el desarrollo del proyecto del desarrollo de CartaPorte.
+					Una empresa de logística aduanera, ayudé en la lógica de pedimentos
+					y en el mantenimiento de un sistema en estado productivo.
+					También participé en el desarrollo del proyecto de CartaPorte.
 				`,
 				remark: {
-					1: 'Developing a web services with ASP.NET CORE and Entity framework CORE, trying to follow a micro-service architecture and improve maintainability.',
-					2: 'Offering customer service to our clients and users via outlook.',
-					3: 'Creating power automate flows to send information to our clients and simple automation tasks.',
-					4: 'Designing web applications and developing them with ReactJS.',
+					1: 'Desarrollo de servicios web con ASP.NET CORE y Entity Framework CORE, siguiendo una arquitectura de microservicios y mejorando la mantenibilidad.',
+					2: 'Atención al cliente para nuestros clientes y usuarios a través de Outlook.',
+					3: 'Creación de flujos de Power Automate para enviar información a nuestros clientes y realizar tareas de automatización simples.',
+					4: 'Diseño y desarrollo de aplicaciones web con ReactJS.',
 				},
 			},
 			haloCreativeAndDesign:{
 				name: 'Halo Creative and Design',
 				duration: 'Enero 2020 - Agosto 2020',
 				description: `
-					En una fábrica de muebles, trabaje en el área de ingenieria y logística.
+					En una fábrica de muebles, trabajé en el área de ingeniería y logística.
 				`,
 				remark:{
-					1: 'Helping in the optimization and implementation of the new informational system Oracle SCM (Supply Chain Management).',
-					2: 'A helper for an industrial engineer, recording times of the production chain and giving new ideas about how to cut times.',
-					3: 'Multiple projects, including one important project that was about changing more than 14,000 records in a SQL Database. (It was a long hard working project due to the limited permissions given by Oracle SCM as an application), still done.',
+					1: 'Ayuda en la optimización e implementación del nuevo sistema de información Oracle SCM (Supply Chain Management).',
+					2: 'Asistente de un ingeniero industrial, registrando tiempos de la cadena de producción y aportando ideas sobre cómo reducir tiempos.',
+					3: 'Múltiples proyectos, incluido uno importante que consistió en cambiar más de 14,000 registros en una base de datos SQL. (Fue un proyecto largo y arduo debido a los permisos limitados otorgados por Oracle SCM como aplicación), aún así lo completé.',
 				},
 			},
 			virtualium: {
 				name: 'Virtualium Team',
 				duration: 'Julio 2020 - Septiembre 2020',
 				description: `
-					De mis primeras experiencias profesionales en la industria de software.
+					De mis primeras experiencias profesionales en la industria del software.
 				`,
 				remark:{
-					1: 'Programming using ReactJS framework.',
-					2: 'Participating and giving ideas of the current project status.',
-					3: 'Consuming API REST, and giving specifications about how the API REST entry points should work, working together finding the best approach for the solution (both me and my coworker, between frontEnd and backEnd developers).',
-					4: 'Nice understading between coworkers and me, using english as our main communication language.',
+					1: 'Programación utilizando el marco ReactJS.',
+					2: 'Participación y aportación de ideas sobre el estado actual del proyecto.',
+					3: 'Consumo de API REST y especificación de cómo deberían funcionar los puntos de entrada de la API REST, trabajando en conjunto para encontrar el mejor enfoque para la solución (entre desarrolladores de frontEnd y backEnd).',
+					4: 'Buena comprensión entre mis compañeros de trabajo y yo, utilizando el inglés como nuestro principal idioma de comunicación.',
 				}
 			}
 		},
 		footer: {
-			madeWith: "Aplicación hecha con svelte"
+			nav: 'Contáctame',
+			madeWith: "Aplicación hecha con svelte",
+			credits:{
+				title: 'Créditos a',
+				family: 'Mi familia',
+				coworkers: 'Compañeros de trabajo',
+				teachers: 'Todos mis profesores',
+				alejandroTaboada: 'La persona que me enseño lo más importante del desarrollo de software, que en paz descanse.',
+				motto: "Si puedes imaginarlo, puedes programarlo",
+			},
+			copyright: '© 2024 José Daniel Flores Morales. Todos los derechos reservados.'
 		}
 	},
 	components:{

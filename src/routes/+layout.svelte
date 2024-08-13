@@ -4,8 +4,8 @@
     import "../app.css";
     import "./../picocss.custom.css";
     import { i18n, language } from "$lib/localization.svelte";
-	import LiNavButtons from "$lib/components/LiNavButtons.svelte";
-    import LanguageSelect from '$lib/components/LanguageSelect.svelte';
+	import LiNavButtons from "./components/LiNavButtons.svelte";
+    import LanguageSelect from './components/LanguageSelect.svelte';
 	import GoToTop from "$lib/components/GoToTop.svelte";
 
     let languageBinding = $state($language);
