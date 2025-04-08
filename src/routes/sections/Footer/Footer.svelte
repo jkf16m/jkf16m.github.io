@@ -11,6 +11,7 @@
                 <li>Email: <a href='mailto:jkf16m@gmail.com'>jkf16m@gmail.com</a></li>
                 <li><a href="https://www.facebook.com/DanyxLive/">Facebook</a></li>
                 <li><a href="https://www.linkedin.com/in/jos%C3%A9-daniel-flores-morales-25305a18a/">Linkedin</a></li>
+                <li><a href="https://www.hackerrank.com/profile/jkf16m">Hackerrank</a></li>
             </ul>
         </section>
         <section>

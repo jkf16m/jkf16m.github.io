@@ -7,9 +7,9 @@ const i18nInstance = new I18n({
     es: esJson,
     en: enJson
 });
-i18nInstance.defaultLocale = 'en';
+i18nInstance.defaultLocale = 'es';
 const i18nState = writable(i18nInstance);
-const currentLang = localStorage.getItem('lang') ?? 'en';
+const currentLang = localStorage.getItem('lang') ?? 'es';
 export const language = writable(currentLang);
 
 export const i18n = derived([i18nState, language],([i18nState, language])=>{

@@ -11,8 +11,8 @@ export default {
 			nav: 'Inicio',
 			greetings: 'José Daniel Flores Morales',
 			welcome: `
-				Desarrollador con más de 3 años de experiencia. Enfocado en frontend, aspirando
-				a la arquitectura de software.
+				Desarrollador con más de 3 años de experiencia. Con experiencia tanto en desarrollo
+				front-end como back-end y conocimientos de arquitectura de software y diseño.
             `,
 			portfolioSourceCode: `Puedes encontrar el código fuente de este portafolio`,
 			here: 'aquí'
@@ -21,7 +21,15 @@ export default {
 			whoAmI: '¿Quién soy?',
 			nav: 'Acerca de',
 			introduction:
-				`Mi nombre es José Daniel Flores Morales, soy un desarrollador de software, actualmente tengo 3 años de experiencia en la industria`,
+				`Mi nombre es José Daniel Flores Morales, soy un desarrollador de software,
+				actualmente tengo 3 años y medio de experiencia en la industria.
+				Tengo experiencia en poder recabar lo que necesitas exactamente, y también
+				en poder crear entornos controlados de desarrollo, pruebas unitarias con xUnit, MSTest en C#,
+				usar Pytest en python, o vitest/jest en typescript/javascript.
+				Considero las pruebas unitarias como una herramienta primordial para un desarrollo, ya que
+				casi siempre, todos los errores y problemas que uno no previene, se pueden simular
+				con una serie de pruebas unitarias.
+				`,
 		},
 		contact: {
 			nav: 'Contáctame'
@@ -31,6 +39,20 @@ export default {
 		},
 		experience: {
 			nav: 'Experiencia',
+			oxxogas1:{
+				name: "proyecto 1",
+				duration: "Junio 2024 - Agosto 2024",
+				description: `
+					Primer proyecto con oxxogas, no puedo revelar el nombre actualmente
+				`,
+				remark: {
+					1: 'Utilice React Native para desarrollar el front-end, junto con un equipo de desarrollo.',
+					2: 'Implementé Backend relacionado a las transacciones, usando el servicio de pagos "NetPay" y certificarlo.',
+					3: `Implementé templates de whatsapp, para mandar a los usuarios las notificaciones correspondientes,
+					Se utilizo el api de whatsapp directamente, ya que utilizar el servicio de terceros Twilio, hubiera agregado
+					más incertidumbre al sistema.`
+				}
+			},
 			pictale:{
 				name: 'proyecto Pictale',
 				duration: "Julio 2023 - Junio 2024",

@@ -4,6 +4,7 @@
 
     import { version } from '$app/environment';
 	import Footer from "./sections/Footer/Footer.svelte";
+	import Projects from "./sections/Projects.svelte";
 </script>
 
 <header>
@@ -17,6 +18,8 @@
 
 
 <Experience/>
+
+<Projects />
 
 <!--contact me-->
 <Footer/>

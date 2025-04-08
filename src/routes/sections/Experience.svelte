@@ -6,8 +6,44 @@
 <article>
     <header><h2 id="experience">{$i18n.t('page.experience.nav')}</h2></header>
 
-    
     <div class="grid">
+        <Experience 
+            remarksCount={4}
+            translationKey={"oxxogas2"}
+            role={"developer"}
+            secondaryRole={'fullstack'}
+            mainTechnology='reactNative'
+            usedTechnologies={[
+                'reactNative',
+                "aspnet",
+                "dotnet",
+                "csharp",
+                "javascript",
+                "nodejs",
+                "mssql"
+            ]}
+        />
+    </div>
+    <div class="grid">
+        <Experience
+            remarksCount={4}
+            translationKey={"oxxogas1"}
+            role={'developer'}
+            secondaryRole={'frontend'}
+            mainTechnology='reactNative'
+            usedTechnologies={[
+                'reactNative',
+                "aspnet",
+                "dotnet",
+                "csharp",
+                "javascript",
+                "nodejs",
+                "mssql"
+            ]}
+        />
+    </div>
+    <div class="grid">
+        
         <Experience
             remarksCount={4}
             translationKey={'pictale'}

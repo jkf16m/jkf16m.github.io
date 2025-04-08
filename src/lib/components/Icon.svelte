@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
     export type Size = "small"|"medium"|"big";
     export type Props = {
         label?: string;

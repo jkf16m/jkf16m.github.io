@@ -1,5 +1,4 @@
-
-<script lang="ts" context="module">
+<script lang="ts" module>
     export type Props = {
         translationKey: string;
         role: string;
