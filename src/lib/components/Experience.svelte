@@ -1,4 +1,9 @@
 <script lang="ts" module>
+    export type Image = {
+        src: string;
+        description: string;
+    }
+
     export type Props = {
         translationKey: string;
         role: string;
@@ -6,11 +11,14 @@
         usedTechnologies: AvailableIcons[];
         secondaryRole: string;
         remarksCount: number;
+        imagesProps?: ImagesProps;
     };
 </script>
 
 <script lang='ts'>
 	import { i18n } from "$lib/localization.svelte";
+	import type { ImagesProps } from "./Images.svelte";
+	import Images from "./Images.svelte";
 	import RegisteredIcon from "./RegisteredIcon.svelte";
 	import type { AvailableIcons } from "./RegisteredIcon.svelte";
 	import RegisteredIcons from "./RegisteredIcons.svelte";
@@ -22,6 +30,7 @@
         secondaryRole,
         remarksCount,
         translationKey,
+        imagesProps = {images:[]}
     } : Props = $props();
 
     let remarks = Array.from({length: remarksCount}, (_, i) => i + 1)
@@ -46,11 +55,16 @@
     <p>
         {experience_t('description')}
     </p>
-    <ul>
-        {#each remarks as remark}
-        <li>{$i18n.t(`page.experience.${translationKey}.remark.${remark}`)}</li>
-        {/each}
-    </ul>
+    <div class="grid">
+        <ul>
+            {#each remarks as remark}
+            <li>{$i18n.t(`page.experience.${translationKey}.remark.${remark}`)}</li>
+            {/each}
+        </ul>
+        {#if imagesProps.images.length !== 0}
+            <Images images={imagesProps.images} />
+        {/if}
+    </div>
 
     <footer class="t-flex t-flex-col t-justify-end">
         <div class="grid">

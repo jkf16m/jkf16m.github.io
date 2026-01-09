@@ -19,7 +19,7 @@
 
 <Experience/>
 
-<Projects />
+<!-- <Projects /> -->
 
 <!--contact me-->
 <Footer/>

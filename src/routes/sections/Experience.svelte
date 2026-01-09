@@ -22,6 +22,29 @@
                 "nodejs",
                 "mssql"
             ]}
+            imagesProps={{images: [
+                {
+                    description: "lorem ipsum",
+                    shortDescription: "lorem",
+                    src: "https://www.shutterstock.com/shutterstock/photos/273199190/display_1500/stock-photo-website-business-internet-and-web-concept-with-demo-word-and-sign-on-colorful-hanged-tags-isolated-273199190.jpg"
+                },{
+                    description: "lorem ipsum",
+                    shortDescription: "lorem",
+                    src: "https://www.shutterstock.com/shutterstock/photos/273199190/display_1500/stock-photo-website-business-internet-and-web-concept-with-demo-word-and-sign-on-colorful-hanged-tags-isolated-273199190.jpg"
+                },{
+                    description: "lorem ipsum",
+                    shortDescription: "lorem",
+                    src: "https://www.shutterstock.com/shutterstock/photos/273199190/display_1500/stock-photo-website-business-internet-and-web-concept-with-demo-word-and-sign-on-colorful-hanged-tags-isolated-273199190.jpg"
+                },{
+                    description: "lorem ipsum",
+                    shortDescription: "lorem",
+                    src: "https://www.shutterstock.com/shutterstock/photos/273199190/display_1500/stock-photo-website-business-internet-and-web-concept-with-demo-word-and-sign-on-colorful-hanged-tags-isolated-273199190.jpg"
+                },{
+                    description: "lorem ipsum",
+                    shortDescription: "lorem",
+                    src: "https://www.shutterstock.com/shutterstock/photos/273199190/display_1500/stock-photo-website-business-internet-and-web-concept-with-demo-word-and-sign-on-colorful-hanged-tags-isolated-273199190.jpg"
+                },
+            ]}}
         />
     </div>
     <div class="grid">
