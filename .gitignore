@@ -1,10 +1,11 @@
 node_modules
+cv.md
 
-# Output
-.output
-.vercel
-/.svelte-kit
-/build
+# Build
+dist/
+docs/
+build/
+*.tsbuildinfo
 
 # OS
 .DS_Store
@@ -19,3 +20,8 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+.vite/
+
+# Stale TS output
+src/**/*.js
+src/**/*.d.ts

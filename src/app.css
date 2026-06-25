@@ -1,5 +1,0 @@
-@import "@picocss/pico/css/pico.jade.min.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

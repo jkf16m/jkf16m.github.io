@@ -1,20 +1,21 @@
-<!-- OPENSPEC:START -->
-# OpenSpec Instructions
+# AGENTS.md
 
-**Critical: When making any change, always prioritize updating the relevant specs first. Do not change implementation or results until the necessary spec changes are made and approved.**
+## UI Component Policy
 
-These instructions are for AI assistants working in this project.
+Every new or modified UI component MUST:
 
-Always open `@/openspec/AGENTS.md` when the request:
-- Mentions planning or proposals (words like proposal, spec, change, plan)
-- Introduces new capabilities, breaking changes, architecture shifts, or big performance/security work
-- Sounds ambiguous and you need the authoritative spec before coding
+1. Have a corresponding `.stories.tsx` file in the same directory
+2. Be previewed and approved by a developer before merging
 
-Use `@/openspec/AGENTS.md` to learn:
-- How to create and apply change proposals
-- Spec format and conventions
-- Project structure and guidelines
+### Story file requirements
 
-Keep this managed block so 'openspec update' can refresh the instructions.
+- Story file must be named `<ComponentName>.stories.tsx`
+- Must include stories for all visual variants and states (e.g., EN/ES for i18n components)
+- Use `argTypes` to expose interactive controls where applicable
 
-<!-- OPENSPEC:END -->
+### Workflow
+
+1. Create or update the component
+2. Add/update the story file
+3. Run `pnpm storybook` to preview
+4. Get developer approval before merging
