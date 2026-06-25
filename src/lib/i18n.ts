@@ -19,7 +19,6 @@ const en = {
     contact: {
       nav: "Contact",
       email: "jkf20m@gmail.com",
-      phone: "+52 8126442877",
       location: "Monterrey, Nuevo León, México",
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -228,7 +227,6 @@ const es = {
     contact: {
       nav: "Contacto",
       email: "jkf20m@gmail.com",
-      phone: "+52 8126442877",
       location: "Monterrey, Nuevo León, México",
       linkedin: "LinkedIn",
       github: "GitHub",
