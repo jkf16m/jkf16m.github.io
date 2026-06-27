@@ -9,12 +9,12 @@ export function NavButtons({ i18n }: { i18n: I18n }) {
   ];
 
   return (
-    <>
+    <ul class="nav-links">
       {links.map((link) => (
         <li key={link.href}>
           <a href={link.href}>{i18n.t(link.key)}</a>
         </li>
       ))}
-    </>
+    </ul>
   );
 }

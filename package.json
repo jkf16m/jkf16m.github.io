@@ -14,18 +14,19 @@
     "preact": "^10.25.4"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.9.4",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "storybook": "^10.4.6",
-    "@storybook/preact-vite": "^10.4.6",
     "@chromatic-com/storybook": "^5.2.1",
-    "@storybook/addon-vitest": "^10.4.6",
+    "@preact/preset-vite": "^2.9.4",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
-    "vitest": "^4.1.9",
-    "playwright": "^1.61.1",
+    "@storybook/addon-vitest": "^10.4.6",
+    "@storybook/preact-vite": "^10.4.6",
     "@vitest/browser-playwright": "^4.1.9",
-    "@vitest/coverage-v8": "^4.1.9"
+    "@vitest/coverage-v8": "^4.1.9",
+    "playwright": "^1.61.1",
+    "puppeteer-core": "^25.2.1",
+    "storybook": "^10.4.6",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^4.1.9"
   }
 }
