@@ -20,6 +20,9 @@ export function App() {
 
   return (
     <>
+      <div class="under-construction-banner">
+        🚧 Under Construction — This site is currently being updated 🚧
+      </div>
       <div class="snap-container">
         <main class="container-fluid">
           <nav>
