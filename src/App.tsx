@@ -18,11 +18,15 @@ export function App() {
     setLang((e.target as HTMLSelectElement).value as Language);
   }, []);
 
+  const isDev = import.meta.env.DEV;
+
   return (
     <>
-      <div class="under-construction-banner">
-        🚧 Under Construction — This site is currently being updated 🚧
-      </div>
+      {!isDev && (
+        <div class="under-construction-banner">
+          🚧 Under Construction — This site is currently being updated 🚧
+        </div>
+      )}
       <div class="snap-container">
         <main class="container-fluid">
           <nav>
@@ -35,24 +39,36 @@ export function App() {
             </ul>
           </nav>
 
-          <article>
-            <header>
-              <h1>{i18n.t("page.home.greetings")}</h1>
-              <p class="subtitle">{i18n.t("page.home.subtitle")}</p>
-            </header>
-            <p>{i18n.t("page.home.welcome")}</p>
+          {isDev ? (
+            <>
+              <article>
+                <header>
+                  <h1>{i18n.t("page.home.greetings")}</h1>
+                  <p class="subtitle">{i18n.t("page.home.subtitle")}</p>
+                </header>
+                <p>{i18n.t("page.home.welcome")}</p>
 
-            <Experience i18n={i18n} />
-            <Projects i18n={i18n} />
-            <Skills i18n={i18n} />
-            <Contact i18n={i18n} />
-          </article>
+                <Experience i18n={i18n} />
+                <Projects i18n={i18n} />
+                <Skills i18n={i18n} />
+                <Contact i18n={i18n} />
+              </article>
 
-          <Footer i18n={i18n} />
-          <GoToTop />
+              <Footer i18n={i18n} />
+              <GoToTop />
+            </>
+          ) : (
+            <article>
+              <header>
+                <h1>🚧 Site Under Construction</h1>
+                <p class="subtitle">This site is currently being updated.</p>
+              </header>
+              <p>Check back soon for updates!</p>
+            </article>
+          )}
         </main>
       </div>
-      <BottomNav i18n={i18n} />
+      {isDev && <BottomNav i18n={i18n} />}
     </>
   );
 }
