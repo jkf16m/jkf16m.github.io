@@ -1,5 +1,15 @@
 # AGENTS.md
 
+## File Self-Documentation
+
+Every file must include a header comment that declares its responsibilities and relationships
+in an indirect, declarative way. Describe what the file is for and what it depends on,
+not what it imports:
+
+- "This file uses components from `./components/`."
+- "This file is in charge of translations."
+- "This file provides the data layer for portfolio entries."
+
 ## UI Component Policy
 
 Every new or modified UI component MUST:

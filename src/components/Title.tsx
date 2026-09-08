@@ -1,5 +1,6 @@
 import { useState, useEffect } from "preact/hooks";
 import type { I18n } from "../lib/i18n";
+import "./Title.css";
 
 interface TitleProps {
   amountUsd: number;

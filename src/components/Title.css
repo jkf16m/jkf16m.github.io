@@ -1,0 +1,41 @@
+/*
+ * Title.css — Component-specific styles for Title.
+ *
+ * Depends on design tokens from ../tokens.css (e.g., --color-text, --font-mono).
+ * Uses responsive font sizing that scales with the container width.
+ */
+
+@import "~/tokens.css";
+
+.title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  width: 100%;
+}
+
+.title-text {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  display: block;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title-text {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+    letter-spacing: -0.03em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-text {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}

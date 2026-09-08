@@ -1,0 +1,84 @@
+/* ────────────────────────────────────────────────────────
+ * Design Tokens
+ *
+ * CSS custom properties for colors, spacing, typography,
+ * radii, shadows, and transitions.
+ *
+ * Import from component CSS files:
+ *   @import "../tokens.css";
+ * ──────────────────────────────────────────────────────── */
+
+:root {
+  /* Dark theme (default) — Minimal Professional */
+  --color-primary: #18181b;
+  --color-secondary: #27272a;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-border: #3f3f46;
+  --color-accent: #818cf8;
+  --color-accent-hover: #a5b4fc;
+  --color-tag-bg: #1e1b4b;
+  --color-tag-text: #c4b5fd;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  --transition: 150ms ease;
+}
+
+/* Light theme — class-based override */
+:root,
+:root[data-theme="dark"] {
+  --color-primary: #18181b;
+  --color-secondary: #27272a;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-border: #3f3f46;
+  --color-accent: #818cf8;
+  --color-accent-hover: #a5b4fc;
+  --color-tag-bg: #1e1b4b;
+  --color-tag-text: #c4b5fd;
+}
+
+:root[data-theme="light"] {
+  --color-primary: #fafafa;
+  --color-secondary: #f4f4f5;
+  --color-text: #18181b;
+  --color-text-muted: #52525b;
+  --color-border: #e5e5e5;
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --color-tag-bg: #ede9fe;
+  --color-tag-text: #5b21b6;
+}
+
+/* Fallback: respect system preference if no explicit choice yet */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --color-primary: #fafafa;
+    --color-secondary: #f4f4f5;
+    --color-text: #18181b;
+    --color-text-muted: #52525b;
+    --color-border: #e5e5e5;
+    --color-accent: #6366f1;
+    --color-accent-hover: #818cf8;
+    --color-tag-bg: #ede9fe;
+    --color-tag-text: #5b21b6;
+  }
+}
