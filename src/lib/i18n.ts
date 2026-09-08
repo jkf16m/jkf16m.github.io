@@ -3,6 +3,7 @@ export type Language = "en" | "es";
 const en = {
   page: {
     title: "Portfolio",
+    heading: "The $ portfolio",
     home: {
       nav: "Home",
       greetings: "José Daniel Flores Morales",
@@ -211,6 +212,7 @@ const en = {
 const es = {
   page: {
     title: "Portafolio",
+    heading: "El portafolio de $ pesos",
     home: {
       nav: "Inicio",
       greetings: "José Daniel Flores Morales",

@@ -671,3 +671,19 @@ section {
     overflow-wrap: break-word;
   }
 }
+
+/* ── Title Component ─────────────────────────────────── */
+.title {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.title-text {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  display: block;
+}
