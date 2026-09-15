@@ -9,6 +9,8 @@ import { ComponentChildren } from "preact";
 import { Link as RouterLink } from "~/components/Link";
 import { Title } from "~/components/Title";
 import { UsageSpan } from "~/components/UsageSpan";
+import { useI18n } from "~/lib/i18n";
+import type { Currency } from "~/lib/currency";
 
 type HeroRootProps = {
   children: ComponentChildren;
@@ -66,10 +68,11 @@ export const Hero = Object.assign(HeroRoot, {
   Title: HeroTitle,
   Subtitle: HeroSubtitle,
   Link: HeroLink,
-  UsageTitle: function HeroUsageTitle() {
+  UsageTitle: function HeroUsageTitle({ currency, onToggleCurrency }: { currency: Currency; onToggleCurrency: (c: Currency) => void }) {
+    const { t } = useI18n();
     return (
       <HeroTitle>
-        The Portfolio of <UsageSpan /> USD
+        {t("hero.title")} <UsageSpan currency={currency} onToggleCurrency={onToggleCurrency} />
       </HeroTitle>
     );
   },

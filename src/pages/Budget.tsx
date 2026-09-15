@@ -6,6 +6,7 @@
 
 import { useEffect, useState } from "preact/hooks";
 import { Hero, Title } from "~/components";
+import { useI18n } from "~/lib/i18n";
 
 const API_URL = import.meta.env.DEV ? "http://localhost:8787" : "https://portfolio-api.jkf16m.workers.dev";
 
@@ -32,6 +33,7 @@ interface ActivityLog {
 }
 
 export function Budget() {
+  const { t } = useI18n();
   const [usage, setUsage] = useState<UsageStats | null>(null);
   const [activity, setActivity] = useState<ActivityLog[]>([]);
   const [loading, setLoading] = useState(true);
@@ -76,8 +78,8 @@ export function Budget() {
         }}
       >
         <Hero>
-          <Hero.UsageTitle />
-          <Hero.Subtitle>Loading statistics...</Hero.Subtitle>
+          <Hero.Title>{t("budget.title")}</Hero.Title>
+          <Hero.Link href="/">{t("hero.backHome")}</Hero.Link>
         </Hero>
       </article>
     );
@@ -95,9 +97,9 @@ export function Budget() {
         }}
       >
         <Hero>
-          <Hero.UsageTitle />
-          <Hero.Subtitle>Error: {error}</Hero.Subtitle>
-          <Hero.Link href="/">← Back home</Hero.Link>
+          <Hero.Title>{t("budget.title")}</Hero.Title>
+          <Hero.Link href="/">{t("hero.backHome")}</Hero.Link>
+          <Hero.Subtitle>{t("budget.error")} {error}</Hero.Subtitle>
         </Hero>
       </article>
     );
@@ -114,46 +116,38 @@ export function Budget() {
       }}
     >
       <Hero>
-        <Hero.UsageTitle />
-        <Hero.Link href="/">← Back home</Hero.Link>
+        <Hero.Title>{t("budget.title")}</Hero.Title>
+        <Hero.Link href="/">{t("hero.backHome")}</Hero.Link>
       </Hero>
 
       {/* Usage Summary */}
       {usage && (
         <section style={{ marginTop: "4rem" }}>
           <Title as="h2" style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", marginBottom: "2rem" }}>
-            Usage Summary
+            {t("budget.usageSummary")}
           </Title>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <th style={{ padding: "1rem", textAlign: "left" }}>Metric</th>
-                <th style={{ padding: "1rem", textAlign: "right" }}>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <td style={{ padding: "1rem" }}>Daily Usage</td>
-                <td style={{ padding: "1rem", textAlign: "right" }}>${usage.usage_daily.toFixed(4)}</td>
-              </tr>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <td style={{ padding: "1rem" }}>Weekly Usage</td>
-                <td style={{ padding: "1rem", textAlign: "right" }}>${usage.usage_weekly.toFixed(4)}</td>
-              </tr>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <td style={{ padding: "1rem" }}>Monthly Usage</td>
-                <td style={{ padding: "1rem", textAlign: "right" }}>${usage.usage_monthly.toFixed(4)}</td>
-              </tr>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <td style={{ padding: "1rem" }}>Daily Limit</td>
-                <td style={{ padding: "1rem", textAlign: "right" }}>${usage.limit}</td>
-              </tr>
-              <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <td style={{ padding: "1rem" }}>Remaining Today</td>
-                <td style={{ padding: "1rem", textAlign: "right" }}>${usage.limit_remaining.toFixed(4)}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", maxWidth: "600px" }}>
+            <div style={{ padding: "1rem", borderBottom: "1px solid var(--color-border)", textAlign: "center" }}>
+              <div style={{ opacity: 0.6, fontSize: "0.875rem" }}>{t("budget.dailyUsage")}</div>
+              <div style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}>${usage.usage_daily.toFixed(4)}</div>
+            </div>
+            <div style={{ padding: "1rem", borderBottom: "1px solid var(--color-border)", textAlign: "center" }}>
+              <div style={{ opacity: 0.6, fontSize: "0.875rem" }}>{t("budget.weeklyUsage")}</div>
+              <div style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}>${usage.usage_weekly.toFixed(4)}</div>
+            </div>
+            <div style={{ padding: "1rem", borderBottom: "1px solid var(--color-border)", textAlign: "center" }}>
+              <div style={{ opacity: 0.6, fontSize: "0.875rem" }}>{t("budget.monthlyUsage")}</div>
+              <div style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}>${usage.usage_monthly.toFixed(4)}</div>
+            </div>
+            <div style={{ padding: "1rem", borderBottom: "1px solid var(--color-border)", textAlign: "center" }}>
+              <div style={{ opacity: 0.6, fontSize: "0.875rem" }}>{t("budget.dailyLimit")}</div>
+              <div style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}>${usage.limit}</div>
+            </div>
+            <div style={{ padding: "1rem", borderBottom: "1px solid var(--color-border)", textAlign: "center" }}>
+              <div style={{ opacity: 0.6, fontSize: "0.875rem" }}>{t("budget.remainingToday")}</div>
+              <div style={{ fontSize: "1.25rem", marginTop: "0.25rem" }}>${usage.limit_remaining.toFixed(4)}</div>
+            </div>
+          </div>
         </section>
       )}
 
@@ -161,19 +155,19 @@ export function Budget() {
       {activity.length > 0 && (
         <section style={{ marginTop: "4rem" }}>
           <Title as="h2" style={{ fontSize: "clamp(1.5rem, 4vw, 3rem)", marginBottom: "2rem" }}>
-            Activity (Last 30 Days)
+            {t("budget.activity")}
           </Title>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid var(--color-border)" }}>
-                  <th style={{ padding: "1rem", textAlign: "left" }}>Date</th>
-                  <th style={{ padding: "1rem", textAlign: "left" }}>Model</th>
-                  <th style={{ padding: "1rem", textAlign: "left" }}>Provider</th>
-                  <th style={{ padding: "1rem", textAlign: "right" }}>Requests</th>
-                  <th style={{ padding: "1rem", textAlign: "right" }}>Usage</th>
-                  <th style={{ padding: "1rem", textAlign: "right" }}>Prompt Tokens</th>
-                  <th style={{ padding: "1rem", textAlign: "right" }}>Completion Tokens</th>
+                  <th style={{ padding: "1rem", textAlign: "left" }}>{t("budget.date")}</th>
+                  <th style={{ padding: "1rem", textAlign: "left" }}>{t("budget.model")}</th>
+                  <th style={{ padding: "1rem", textAlign: "left" }}>{t("budget.provider")}</th>
+                  <th style={{ padding: "1rem", textAlign: "right" }}>{t("budget.requests")}</th>
+                  <th style={{ padding: "1rem", textAlign: "right" }}>{t("budget.usage")}</th>
+                  <th style={{ padding: "1rem", textAlign: "right" }}>{t("budget.promptTokens")}</th>
+                  <th style={{ padding: "1rem", textAlign: "right" }}>{t("budget.completionTokens")}</th>
                 </tr>
               </thead>
               <tbody>

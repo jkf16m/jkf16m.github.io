@@ -4,9 +4,13 @@
  * The landing page of the portfolio.
  */
 
-import { Hero } from "~/components";
+import { Hero, useCurrency } from "~/components";
+import { useI18n } from "~/lib/i18n";
 
 export function Home() {
+  const [currency, setCurrency] = useCurrency();
+  const { t } = useI18n();
+
   return (
     <article
       style={{
@@ -19,9 +23,9 @@ export function Home() {
       }}
     >
       <Hero>
-        <Hero.UsageTitle />
-        <Hero.Subtitle>Transparent AI spending, built in public.</Hero.Subtitle>
-        <Hero.Link href="/budget">See the budget →</Hero.Link>
+        <Hero.UsageTitle currency={currency} onToggleCurrency={setCurrency} />
+        <Hero.Subtitle>{t("hero.subtitle")}</Hero.Subtitle>
+        <Hero.Link href="/budget">{t("hero.seeBudget")}</Hero.Link>
       </Hero>
     </article>
   );
