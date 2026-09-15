@@ -79,6 +79,19 @@ export default {
       }, { headers });
     }
 
+    // GET /api/usage/simple — get portfolio-2 usage as plain text dollars
+    if (url.pathname === "/api/usage/simple" && request.method === "GET") {
+      const res = await openRouterFetch("/keys", env);
+      const { data } = await res.json();
+      const portfolio = data.find((k: any) => k.name === "portfolio-2");
+      if (!portfolio) {
+        return new Response("Key not found", { status: 404, headers: { ...headers, "Content-Type": "text/plain" } });
+      }
+      return new Response(portfolio.usage.toFixed(6), {
+        headers: { ...headers, "Content-Type": "text/plain" },
+      });
+    }
+
     // GET /api/activity — get portfolio-2 activity logs
     if (url.pathname === "/api/activity" && request.method === "GET") {
       // First get the key hash for portfolio-2

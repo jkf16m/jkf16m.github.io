@@ -4,16 +4,25 @@
  * The landing page of the portfolio.
  */
 
-import { Link, Title } from "~/components";
+import { Hero } from "~/components";
 
 export function Home() {
   return (
-    <article>
-      <Title>The $10 Portfolio</Title>
-      <Title as="h2">Building something from nothing.</Title>
-      <Link href="/budget">
-        <Title as="span">See the budget →</Title>
-      </Link>
+    <article
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "2rem",
+      }}
+    >
+      <Hero>
+        <Hero.UsageTitle />
+        <Hero.Subtitle>Transparent AI spending, built in public.</Hero.Subtitle>
+        <Hero.Link href="/budget">See the budget →</Hero.Link>
+      </Hero>
     </article>
   );
 }

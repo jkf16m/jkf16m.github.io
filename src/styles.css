@@ -21,6 +21,11 @@
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 4rem;
+
+  /* Hero defaults */
+  --hero-font-size: clamp(3rem, 10vw, 8rem);
+  --hero-subtitle-size: clamp(1rem, 3vw, 2rem);
+  --hero-link-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 *,
