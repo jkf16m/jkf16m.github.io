@@ -71,8 +71,8 @@ export function UsageSpan({ currency, onToggleCurrency, class: className }: Usag
   }, [started, targetUsd, currency, exchangeRate]);
 
   const isMxn = currency === "MXN";
-  const prefix = isMxn ? "MX$" : "$";
-  const decimals = isMxn ? 2 : 6;
+  const prefix = "$";
+  const decimals = 6;
   const formatted = displayValue.toFixed(decimals);
   const [intPart, decPart] = formatted.split(".");
 
@@ -106,16 +106,6 @@ export function UsageSpan({ currency, onToggleCurrency, class: className }: Usag
     </span>
   );
 
-  if (isMxn) {
-    return (
-      <span class={className}>
-        <span>{prefix}{intPart}.{decPart}</span>
-        {" "}{currencyLabel}
-      </span>
-    );
-  }
-
-  // USD: first 2 decimals full size, rest shrink
   const bigDec = decPart.slice(0, 2);
   const smallDec = decPart.slice(2);
 
