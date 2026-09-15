@@ -90,7 +90,7 @@ export function UsageSpan({ currency, onToggleCurrency, class: className }: Usag
       onClick={handleToggle}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      style={{ cursor: "pointer", userSelect: "none", opacity: 0.8, transition: "opacity 0.2s" }}
+      class="cursor-pointer select-none opacity-80 hover:opacity-100 transition-opacity"
     >
       {letters.map((letter, i) => (
         <span
@@ -127,8 +127,9 @@ export function UsageSpan({ currency, onToggleCurrency, class: className }: Usag
       <span style={{ fontSize: "1em" }}>{bigDec}</span>
       {smallDec.split("").map((ch, i) => {
         const scale = 0.6 - (i / smallDec.length) * 0.25;
+        const opacity = 0.7 - (i / smallDec.length) * 0.2;
         return (
-          <span key={i} style={{ fontSize: `${scale}em`, opacity: 0.7 - (i / smallDec.length) * 0.2 }}>
+          <span key={i} style={{ fontSize: `${scale}em`, opacity }}>
             {ch}
           </span>
         );

@@ -6,10 +6,12 @@
 
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
+import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     preact({
       prerender: { enabled: true },
     }),

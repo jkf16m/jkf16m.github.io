@@ -4,7 +4,7 @@
 
 export const translations = {
   "hero.title": "El Portafolio de",
-  "hero.subtitle": "Gasto en IA transparente, construido en público.",
+  "hero.subtitle": "Gasto en LLM transparente, construido en público.",
   "hero.seeBudget": "Ver el presupuesto →",
   "hero.backHome": "← Volver al inicio",
   "budget.title": "El Presupuesto",
@@ -26,4 +26,6 @@ export const translations = {
   "budget.completionTokens": "Tokens de Completado",
   "budget.metric": "Métrica",
   "budget.value": "Valor",
+  "hero.by": "Por",
+  "hero.author": "José Daniel Flores Morales",
 } as const;

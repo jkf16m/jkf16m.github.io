@@ -2,13 +2,12 @@
  * Hero.tsx — Compound hero component
  *
  * Compose <Hero>, <Hero.Title>, <Hero.Subtitle>, <Hero.Link> together.
- * Consumes CSS variables for sizing — pages control the look.
+ * Uses Tailwind classes for styling.
  */
 
 import { ComponentChildren } from "preact";
-import { Link as RouterLink } from "~/components/Link";
-import { Title } from "~/components/Title";
-import { UsageSpan } from "~/components/UsageSpan";
+import { Link as RouterLink } from "~/shared/Link";
+import { UsageSpan } from "~/home/UsageSpan";
 import { useI18n } from "~/lib/i18n";
 import type { Currency } from "~/lib/currency";
 
@@ -19,7 +18,7 @@ type HeroRootProps = {
 
 function HeroRoot({ children, class: className }: HeroRootProps) {
   return (
-    <div class={className} style={{ textAlign: "center" }}>
+    <div class={`text-center ${className || ""}`}>
       {children}
     </div>
   );
@@ -31,9 +30,9 @@ type HeroTitleProps = {
 
 function HeroTitle({ children }: HeroTitleProps) {
   return (
-    <Title style={{ fontSize: "var(--hero-font-size)", lineHeight: 1.1, marginBottom: "1rem" }}>
+    <h1 class="text-4xl md:text-7xl lg:text-8xl font-bold leading-tight mb-4">
       {children}
-    </Title>
+    </h1>
   );
 }
 
@@ -43,9 +42,9 @@ type HeroSubtitleProps = {
 
 function HeroSubtitle({ children }: HeroSubtitleProps) {
   return (
-    <Title as="h2" style={{ fontSize: "var(--hero-subtitle-size)", opacity: 0.7, marginBottom: "2rem" }}>
+    <h2 class="text-lg md:text-xl opacity-70 mb-8">
       {children}
-    </Title>
+    </h2>
   );
 }
 
@@ -57,9 +56,9 @@ type HeroLinkProps = {
 function HeroLink({ href, children }: HeroLinkProps) {
   return (
     <RouterLink href={href}>
-      <Title as="span" style={{ fontSize: "var(--hero-link-size)", opacity: 0.6, cursor: "pointer" }}>
+      <span class="text-base md:text-lg opacity-60 cursor-pointer hover:opacity-100 transition-opacity">
         {children}
-      </Title>
+      </span>
     </RouterLink>
   );
 }
@@ -72,7 +71,8 @@ export const Hero = Object.assign(HeroRoot, {
     const { t } = useI18n();
     return (
       <HeroTitle>
-        {t("hero.title")} <UsageSpan currency={currency} onToggleCurrency={onToggleCurrency} />
+        <span class="block">{t("hero.title")}</span>
+        <span class="block"><UsageSpan currency={currency} onToggleCurrency={onToggleCurrency} /></span>
       </HeroTitle>
     );
   },

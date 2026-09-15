@@ -35,7 +35,9 @@ export type TranslationKey =
   | "budget.promptTokens"
   | "budget.completionTokens"
   | "budget.metric"
-  | "budget.value";
+  | "budget.value"
+  | "hero.by"
+  | "hero.author";
 
 interface I18nContextValue {
   locale: Locale;

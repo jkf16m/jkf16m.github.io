@@ -5,7 +5,8 @@
  */
 
 import { LocationProvider, Router as IsoRouter, Route } from "preact-iso/router";
-import { Home, Budget } from "./pages";
+import { Home } from "./home";
+import { Budget } from "./budget";
 
 export function Router() {
   return (
