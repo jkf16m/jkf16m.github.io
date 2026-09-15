@@ -1,14 +1,28 @@
-/* ────────────────────────────────────────────────────────
- * Global Styles
+/**
+ * styles.css — Global styles
  *
- * Essential base styles only. Component styles live in their own CSS files.
- * Import tokens.css directly from component CSS files:
- *   @import "../tokens.css";
- * ──────────────────────────────────────────────────────── */
+ * Single stylesheet with CSS variables for the entire app.
+ */
 
-@import "~/tokens.css";
+:root {
+  /* Colors — Cool Slate Dark */
+  --color-text: #f8fafc;
+  --color-border: #334155;
+  --color-bg: #0f172a;
 
-/* ── Reset ────────────────────────────────────────────── */
+  /* Typography */
+  --font-family: system-ui, -apple-system, sans-serif;
+  --font-size: 1rem;
+  --line-height: 1.5;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+}
+
 *,
 *::before,
 *::after {
@@ -17,140 +31,20 @@
   padding: 0;
 }
 
-/* ── Base ────────────────────────────────────────────── */
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
-  font-family: var(--font-sans);
-  font-size: clamp(0.95rem, 2vw, 1rem);
-  line-height: 1.7;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   color: var(--color-text);
-  background: var(--color-primary);
+  background: var(--color-bg);
+  text-align: center;
 }
 
-/* ── Mobile Snap Scroll ──────────────────────────────── */
-@media (max-width: 768px) {
-
-  nav {
-    position: sticky;
-    top: 32px;
-    z-index: 50;
-    background: var(--color-primary);
-    padding: var(--space-sm) 0;
-  }
-
-  article {
-    padding: 0;
-    margin: 0;
-  }
-
-  article > header {
-    padding: calc(var(--space-xl) + 50px) var(--space-md) var(--space-xl);
-    scroll-snap-align: start;
-  }
-
-  article > section {
-    scroll-snap-align: start;
-    height: 100vh;
-    height: 100dvh;
-    overflow-y: auto;
-    padding: clamp(var(--space-lg), 4vw, var(--space-xl)) var(--space-md);
-    padding-bottom: 70px;
-    border-bottom: 1px solid var(--color-border);
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  article > section:last-child {
-    border-bottom: none;
-  }
-
-  .site-footer {
-    padding-bottom: 80px;
-  }
+a {
+  color: inherit;
 }
 
-/* ── Bottom Navigation ───────────────────────────────── */
-.bottom-nav {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 56px;
-    background: var(--color-primary);
-    border-top: 1px solid var(--color-border);
-    z-index: 1000;
-    padding: 0 8px;
-    padding-bottom: env(safe-area-inset-bottom, 0);
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .snap-container {
-    padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .bottom-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    flex: 1;
-    height: 100%;
-    padding: var(--space-xs) 0;
-    background: transparent;
-    border: none;
-    color: var(--color-text-muted);
-    font-size: 0.65rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color var(--transition), background var(--transition);
-    min-width: 48px;
-    min-height: 48px;
-    position: relative;
-  }
-
-  .bottom-nav-item:hover {
-    color: var(--color-text);
-    background: rgba(128, 128, 128, 0.1);
-  }
-
-  .bottom-nav-item.active {
-    color: var(--color-accent);
-  }
-
-  .bottom-nav-item.active::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 24px;
-    height: 3px;
-    background: var(--color-accent);
-    border-radius: 0 0 3px 3px;
-  }
-
-  .bottom-nav-icon {
-    font-size: 1.25rem;
-    line-height: 1;
-  }
-
-  .bottom-nav-label {
-    font-size: 0.6rem;
-    letter-spacing: 0.02em;
-  }
+img {
+  max-width: 100%;
+  display: block;
 }

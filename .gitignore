@@ -25,3 +25,7 @@ vite.config.ts.timestamp-*
 # Stale TS output
 src/**/*.js
 src/**/*.d.ts
+
+# Cloudflare Worker
+.wrangler/
+worker/.wrangler/

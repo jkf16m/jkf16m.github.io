@@ -1,43 +1,26 @@
-/// <reference types="vitest/config" />
+/**
+ * vite.config.ts — Vite configuration
+ *
+ * Minimal config with Preact prerendering for GitHub Pages.
+ */
+
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { playwright } from '@vitest/browser-playwright';
-const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+import path from "node:path";
 
-// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [preact()],
+  plugins: [
+    preact({
+      prerender: { enabled: true },
+    }),
+  ],
   resolve: {
     alias: {
-      "~": path.resolve(dirname, "src")
-    }
+      "~": path.resolve(__dirname, "src"),
+    },
   },
   build: {
-    outDir: "dist"
+    outDir: "dist",
+    emptyOutDir: true,
   },
-  test: {
-    projects: [{
-      extends: true,
-      plugins: [
-      // The plugin will run tests for the stories defined in your Storybook config
-      // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-      storybookTest({
-        configDir: path.join(dirname, '.storybook')
-      })],
-      test: {
-        name: 'storybook',
-        browser: {
-          enabled: true,
-          headless: true,
-          provider: playwright({}),
-          instances: [{
-            browser: 'chromium'
-          }]
-        }
-      }
-    }]
-  }
 });

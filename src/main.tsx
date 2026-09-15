@@ -1,5 +1,17 @@
-import { render } from "preact";
+/**
+ * main.tsx — Entry point
+ *
+ * Mounts the App component with prerendering support.
+ */
+
+import { hydrate, prerender as ssr } from "preact-iso";
 import { App } from "./App";
 import "./styles.css";
 
-render(<App />, document.getElementById("app")!);
+if (typeof window !== "undefined") {
+  hydrate(<App />, document.getElementById("app")!);
+}
+
+export async function prerender(data: unknown) {
+  return await ssr(<App {...(data as object)} />);
+}
