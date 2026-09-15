@@ -29,3 +29,4 @@ src/**/*.d.ts
 # Cloudflare Worker
 .wrangler/
 worker/.wrangler/
+worker/.dev.vars
